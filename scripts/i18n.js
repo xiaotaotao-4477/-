@@ -14,8 +14,9 @@ const dict = {
     "nav.contact": "联系",
 
     "hero.eyebrow": "你好，我是",
-    "hero.name": "你的名字",
-    "hero.subtitle": "一句话介绍自己：你在做什么、擅长什么、关心什么。",
+    "hero.name": "陈卓雅",
+    "hero.nameEn": "Zoey Chen",
+    "hero.subtitle": "我是一名视觉设计师，擅长三维设计、动效设计、画册设计",
     "hero.ctaResume": "下载简历",
     "hero.ctaContact": "联系我",
     "hero.meta.location": "📍 城市",
@@ -88,8 +89,9 @@ const dict = {
     "nav.contact": "Contact",
 
     "hero.eyebrow": "Hi, I'm",
-    "hero.name": "Your Name",
-    "hero.subtitle": "One-liner: what you do, what you’re good at, what you care about.",
+    "hero.name": "Zhuoya Chen",
+    "hero.nameEn": "Zoey Chen",
+    "hero.subtitle": "I'm a Visual Designer, specialized in 3D, motion, and layout design.",
     "hero.ctaResume": "Download resume",
     "hero.ctaContact": "Contact me",
     "hero.meta.location": "📍 City",
