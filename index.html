@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title data-i18n="meta.title">个人主页</title>
+    <meta name="description" content="A minimal, modern personal homepage." data-i18n-attr="content:meta.description" />
+
+    <link rel="icon" href="data:," />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link rel="stylesheet" href="./styles/base.css" />
+    <link rel="stylesheet" href="./styles/components.css" />
+    <link rel="stylesheet" href="./styles/sections.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#home" data-i18n="a11y.skipToContent">跳到正文</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#home" aria-label="Home">
+          <span class="brand-dot" aria-hidden="true"></span>
+          <span class="brand-text" data-i18n="brand.name">你的名字</span>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <a class="nav-link" href="#about" data-i18n="nav.about">关于</a>
+          <a class="nav-link" href="#projects" data-i18n="nav.projects">项目</a>
+          <a class="nav-link" href="#resume" data-i18n="nav.resume">简历</a>
+          <a class="nav-link" href="#gallery" data-i18n="nav.gallery">图集</a>
+          <a class="nav-link" href="#blog" data-i18n="nav.blog">博客</a>
+          <a class="nav-link" href="#contact" data-i18n="nav.contact">联系</a>
+        </nav>
+
+        <div class="header-actions">
+          <div class="lang-switch" role="group" aria-label="Language">
+            <button class="chip" type="button" data-lang="zh">中文</button>
+            <button class="chip" type="button" data-lang="en">EN</button>
+          </div>
+          <button class="icon-btn" type="button" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
+            <span class="icon" aria-hidden="true">◐</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="section hero">
+        <div class="container hero-grid">
+          <div class="hero-left">
+            <p class="eyebrow" data-i18n="hero.eyebrow">你好，我是</p>
+            <h1 class="hero-title">
+              <span class="hero-name" data-i18n="hero.name">陈卓雅</span>
+            </h1>
+            <p class="hero-subtitle" data-i18n="hero.subtitle">
+             我是一名视觉设计师，擅长三维设计、动效设计、画册设计
+            </p>
+
+            <div class="hero-cta">
+              <a class="btn primary" href="./resume.pdf" download data-i18n="hero.ctaResume">下载简历</a>
+              <a class="btn" href="#contact" data-i18n="hero.ctaContact">联系我</a>
+            </div>
+
+            <div class="hero-meta">
+              <span class="meta-item" data-i18n="hero.meta.location">📍 城市</span>
+              <span class="meta-dot" aria-hidden="true">•</span>
+              <span class="meta-item" data-i18n="hero.meta.focus">专注：前端 / 设计 / 产品</span>
+            </div>
+          </div>
+
+          <div class="hero-right">
+            <div class="glass card avatar-card">
+              <img
+                class="avatar"
+                src="./assets/avatar.jpg"
+                alt="Avatar"
+                loading="eager"
+                decoding="async"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+              />
+              <div class="avatar-fallback" style="display: none" aria-hidden="true">
+                <div class="avatar-circle"></div>
+              </div>
+              <div class="avatar-caption">
+                <span class="tag" data-i18n="hero.roleTag">Developer · Designer</span>
+                <span class="tag subtle" data-i18n="hero.statusTag">Open to work</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title" data-i18n="about.title">关于我</h2>
+            <p class="section-desc" data-i18n="about.desc">用 2–3 句话说明你的方向与价值。</p>
+          </div>
+
+          <div class="about-grid">
+            <div class="glass card">
+              <ul class="bullets">
+                <li data-i18n="about.b1">偏好极简与细节，重视一致性与可用性。</li>
+                <li data-i18n="about.b2">能把需求落成清晰的方案与高质量交付。</li>
+                <li data-i18n="about.b3">关注性能、无障碍与体验的“最后 10%”。</li>
+              </ul>
+            </div>
+
+            <div class="glass card">
+              <h3 class="card-title" data-i18n="about.skillsTitle">技能</h3>
+              <div class="tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">React</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">Figma</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title" data-i18n="projects.title">作品 / 项目</h2>
+            <p class="section-desc" data-i18n="projects.desc">挑选 3–6 个最能代表你的项目。</p>
+          </div>
+
+          <div class="grid cards" id="projectsGrid">
+            <article class="card project">
+              <div class="project-top">
+                <h3 class="project-title">Project One</h3>
+                <span class="chip subtle">2026</span>
+              </div>
+              <p class="project-desc" data-i18n="projects.p1.desc">一句话描述：解决了什么问题，有什么亮点。</p>
+              <div class="tags">
+                <span class="tag">UI</span>
+                <span class="tag">Web</span>
+                <span class="tag">Performance</span>
+              </div>
+              <div class="project-actions">
+                <a class="btn small" href="#" target="_blank" rel="noopener noreferrer" data-i18n="projects.view">查看</a>
+                <a class="btn small ghost" href="#" target="_blank" rel="noopener noreferrer" data-i18n="projects.code">源码</a>
+              </div>
+            </article>
+
+            <article class="card project">
+              <div class="project-top">
+                <h3 class="project-title">Project Two</h3>
+                <span class="chip subtle">2025</span>
+              </div>
+              <p class="project-desc" data-i18n="projects.p2.desc">一句话描述：技术栈、你负责的部分、成果。</p>
+              <div class="tags">
+                <span class="tag">Design</span>
+                <span class="tag">Frontend</span>
+              </div>
+              <div class="project-actions">
+                <a class="btn small" href="#" target="_blank" rel="noopener noreferrer" data-i18n="projects.view">查看</a>
+                <a class="btn small ghost" href="#" target="_blank" rel="noopener noreferrer" data-i18n="projects.code">源码</a>
+              </div>
+            </article>
+
+            <article class="card project">
+              <div class="project-top">
+                <h3 class="project-title">Project Three</h3>
+                <span class="chip subtle">2024</span>
+              </div>
+              <p class="project-desc" data-i18n="projects.p3.desc">一句话描述：用数据说话（性能提升/转化/效率）。</p>
+              <div class="tags">
+                <span class="tag">Accessibility</span>
+                <span class="tag">DX</span>
+              </div>
+              <div class="project-actions">
+                <a class="btn small" href="#" target="_blank" rel="noopener noreferrer" data-i18n="projects.view">查看</a>
+                <a class="btn small ghost" href="#" target="_blank" rel="noopener noreferrer" data-i18n="projects.code">源码</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="resume" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title" data-i18n="resume.title">简历</h2>
+            <p class="section-desc" data-i18n="resume.desc">用时间线展示关键经历与代表成果。</p>
+          </div>
+
+          <div class="resume-grid">
+            <div class="glass card">
+              <div class="timeline">
+                <div class="tl-item">
+                  <div class="tl-dot" aria-hidden="true"></div>
+                  <div class="tl-content">
+                    <div class="tl-top">
+                      <h3 class="tl-title" data-i18n="resume.t1.title">公司 / 学校 · 角色</h3>
+                      <span class="chip subtle" data-i18n="resume.t1.time">2025 — 现在</span>
+                    </div>
+                    <p class="tl-desc" data-i18n="resume.t1.desc">1–2 句描述：你负责什么，带来什么变化。</p>
+                  </div>
+                </div>
+
+                <div class="tl-item">
+                  <div class="tl-dot" aria-hidden="true"></div>
+                  <div class="tl-content">
+                    <div class="tl-top">
+                      <h3 class="tl-title" data-i18n="resume.t2.title">公司 / 学校 · 角色</h3>
+                      <span class="chip subtle" data-i18n="resume.t2.time">2023 — 2025</span>
+                    </div>
+                    <p class="tl-desc" data-i18n="resume.t2.desc">用“成果 + 指标”写法更有说服力。</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="glass card">
+              <h3 class="card-title" data-i18n="resume.downloadTitle">下载</h3>
+              <p class="muted" data-i18n="resume.downloadDesc">把你的 PDF 简历放在项目根目录的 `resume.pdf`。</p>
+              <a class="btn primary" href="./resume.pdf" download data-i18n="resume.downloadBtn">下载 PDF</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title" data-i18n="gallery.title">图集</h2>
+            <p class="section-desc" data-i18n="gallery.desc">放一些你喜欢的作品、截图、照片或灵感。</p>
+          </div>
+
+          <div class="grid gallery" id="galleryGrid">
+            <button class="gallery-item" type="button" data-full="./assets/gallery/1.jpg" aria-label="Open image 1">
+              <span class="gallery-ph" aria-hidden="true">1</span>
+            </button>
+            <button class="gallery-item" type="button" data-full="./assets/gallery/2.jpg" aria-label="Open image 2">
+              <span class="gallery-ph" aria-hidden="true">2</span>
+            </button>
+            <button class="gallery-item" type="button" data-full="./assets/gallery/3.jpg" aria-label="Open image 3">
+              <span class="gallery-ph" aria-hidden="true">3</span>
+            </button>
+            <button class="gallery-item" type="button" data-full="./assets/gallery/4.jpg" aria-label="Open image 4">
+              <span class="gallery-ph" aria-hidden="true">4</span>
+            </button>
+            <button class="gallery-item" type="button" data-full="./assets/gallery/5.jpg" aria-label="Open image 5">
+              <span class="gallery-ph" aria-hidden="true">5</span>
+            </button>
+            <button class="gallery-item" type="button" data-full="./assets/gallery/6.jpg" aria-label="Open image 6">
+              <span class="gallery-ph" aria-hidden="true">6</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="blog" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title" data-i18n="blog.title">博客</h2>
+            <p class="section-desc" data-i18n="blog.desc">先用外链接入，后续再升级为独立博客也很方便。</p>
+          </div>
+
+          <div class="grid cards">
+            <a class="card link-card" href="#" target="_blank" rel="noopener noreferrer">
+              <div class="link-card-top">
+                <h3 class="card-title" data-i18n="blog.b1.title">文章标题示例</h3>
+                <span class="chip subtle" data-i18n="blog.b1.meta">2026 · 3 分钟</span>
+              </div>
+              <p class="muted" data-i18n="blog.b1.desc">一句话摘要：写了什么、解决了什么。</p>
+              <span class="link-arrow" aria-hidden="true">→</span>
+            </a>
+
+            <a class="card link-card" href="#" target="_blank" rel="noopener noreferrer">
+              <div class="link-card-top">
+                <h3 class="card-title" data-i18n="blog.b2.title">文章标题示例</h3>
+                <span class="chip subtle" data-i18n="blog.b2.meta">2025 · 5 分钟</span>
+              </div>
+              <p class="muted" data-i18n="blog.b2.desc">用“主题 + 收获”写摘要最清晰。</p>
+              <span class="link-arrow" aria-hidden="true">→</span>
+            </a>
+
+            <a class="card link-card" href="#" target="_blank" rel="noopener noreferrer">
+              <div class="link-card-top">
+                <h3 class="card-title" data-i18n="blog.more">查看更多</h3>
+                <span class="chip subtle" data-i18n="blog.platform">Notion / Medium / 掘金</span>
+              </div>
+              <p class="muted" data-i18n="blog.moreDesc">把这里链接到你的博客主页或文章列表。</p>
+              <span class="link-arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title" data-i18n="contact.title">联系</h2>
+            <p class="section-desc" data-i18n="contact.desc">欢迎交流合作、项目机会或一起做点有趣的事。</p>
+          </div>
+
+          <div class="grid cards contact-grid">
+            <div class="glass card">
+              <h3 class="card-title" data-i18n="contact.emailTitle">邮箱</h3>
+              <p class="muted">
+                <a class="mono" href="mailto:you@example.com" id="emailLink">you@example.com</a>
+              </p>
+              <button class="btn small" type="button" id="copyEmailBtn" data-i18n="contact.copyEmail">复制邮箱</button>
+              <p class="tiny muted" id="copyEmailHint" role="status" aria-live="polite"></p>
+            </div>
+
+            <a class="glass card link-card" href="#" target="_blank" rel="noopener noreferrer">
+              <div class="link-card-top">
+                <h3 class="card-title">GitHub</h3>
+                <span class="chip subtle">@username</span>
+              </div>
+              <p class="muted" data-i18n="contact.githubDesc">项目与代码。</p>
+              <span class="link-arrow" aria-hidden="true">→</span>
+            </a>
+
+            <a class="glass card link-card" href="#" target="_blank" rel="noopener noreferrer">
+              <div class="link-card-top">
+                <h3 class="card-title">LinkedIn</h3>
+                <span class="chip subtle">Profile</span>
+              </div>
+              <p class="muted" data-i18n="contact.linkedinDesc">职业经历与联系。</p>
+              <span class="link-arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <footer class="site-footer">
+            <p class="tiny muted">
+              <span data-i18n="footer.note">用纯静态页面制作 · GitHub Pages 部署</span>
+              <span class="meta-dot" aria-hidden="true">•</span>
+              <a class="tiny-link" href="#home" data-i18n="footer.backTop">回到顶部</a>
+            </p>
+          </footer>
+        </div>
+      </section>
+    </main>
+
+    <dialog class="lightbox" id="lightboxDialog" aria-label="Image viewer">
+      <button class="icon-btn lightbox-close" type="button" data-close aria-label="Close">×</button>
+      <img class="lightbox-img" alt="" />
+      <p class="tiny muted lightbox-caption"></p>
+    </dialog>
+
+    <script src="./scripts/i18n.js" defer></script>
+    <script src="./scripts/lightbox.js" defer></script>
+    <script src="./scripts/main.js" defer></script>
+  </body>
+</html>
