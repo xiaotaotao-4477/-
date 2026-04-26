@@ -219,6 +219,20 @@ html[data-theme="dark"] .icon-btn {
   .cards > .card {
     grid-column: span 12;
   }
+
+  .card {
+    padding: 16px;
+  }
+
+  .btn {
+    padding: 12px 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 14px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

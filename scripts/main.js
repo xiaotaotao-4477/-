@@ -89,11 +89,48 @@ function initLangButtonStyle() {
   });
 }
 
+function initMobileNav() {
+  const toggle = document.getElementById("menuToggle");
+  const nav = document.querySelector(".nav");
+  if (!toggle || !nav) return;
+
+  const closeMenu = () => {
+    nav.classList.remove("is-active");
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.querySelector(".icon").textContent = "☰";
+  };
+
+  toggle.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const isActive = nav.classList.toggle("is-active");
+    toggle.setAttribute("aria-expanded", isActive ? "true" : "false");
+    toggle.querySelector(".icon").textContent = isActive ? "×" : "☰";
+  });
+
+  // Close when clicking outside
+  document.addEventListener("click", (e) => {
+    if (nav.classList.contains("is-active") && !nav.contains(e.target) && e.target !== toggle) {
+      closeMenu();
+    }
+  });
+
+  // Close when clicking a link
+  nav.querySelectorAll(".nav-link").forEach((link) => {
+    link.addEventListener("click", () => closeMenu());
+  });
+
+  // Close on escape key
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeMenu();
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   initTheme();
   initLangButtonStyle();
   initScrollSpy();
   initSmoothAnchors();
   initCopyEmail();
+  initMobileNav();
 });
 

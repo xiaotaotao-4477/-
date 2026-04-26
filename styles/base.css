@@ -158,3 +158,13 @@ button {
     padding: 64px 0;
   }
 }
+
+@media (max-width: 480px) {
+  :root {
+    --pad: 14px;
+  }
+
+  .section {
+    padding: 52px 0;
+  }
+}

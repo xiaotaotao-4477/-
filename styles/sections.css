@@ -336,9 +336,46 @@ html[data-theme="dark"] .gallery-item {
   margin: 12px 0 0;
 }
 
+.menu-toggle {
+  display: none;
+}
+
 @media (max-width: 980px) {
+  .menu-toggle {
+    display: inline-flex;
+  }
+
   .nav {
-    display: none;
+    display: flex;
+    position: fixed;
+    top: 72px;
+    left: var(--pad);
+    right: var(--pad);
+    flex-direction: column;
+    padding: 12px;
+    background: var(--surface-strong);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 24px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    transform: translateY(-20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 240ms cubic-bezier(0.4, 0, 0.2, 1), opacity 240ms ease;
+    z-index: 100;
+  }
+
+  .nav.is-active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-link {
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 1.05rem;
   }
 
   .hero-grid,
@@ -361,8 +398,92 @@ html[data-theme="dark"] .gallery-item {
     padding-top: 44px;
   }
 
+  .header-inner {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .header-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .hero-title {
+    font-size: clamp(1.8rem, 8vw, 2.4rem);
+  }
+
+  .hero-subtitle,
+  .section-desc,
+  .project-desc,
+  .tl-desc {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .project-top,
+  .link-card-top,
+  .tl-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .hero-cta,
+  .project-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-cta .btn,
+  .project-actions .btn,
+  #copyEmailBtn {
+    width: 100%;
+  }
+
+  .avatar,
+  .avatar-fallback {
+    height: 220px;
+  }
+
+  .hero-meta {
+    gap: 6px;
+  }
+
+  .meta-dot {
+    display: none;
+  }
+
+  .project-title,
+  .card-title,
+  .tl-title,
+  .mono,
+  .muted,
+  .section-desc {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
   .gallery-item {
     grid-column: span 12;
+  }
+
+  .site-footer p {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .chip,
+  .tag,
+  .nav-link {
+    font-size: 0.88rem;
+  }
+
+  .lightbox {
+    width: calc(100vw - 20px);
+    padding: 14px;
   }
 }
 
