@@ -13,9 +13,9 @@
   --radius-sm: 12px;
   --maxw: 1120px;
   --pad: 20px;
-  --accent: #0a84ff; /* close to iOS blue */
-  --accent-ink: #053a6b;
-  --focus: rgba(10, 132, 255, 0.35);
+  --accent: #1E35FF; /* Your theme color */
+  --accent-ink: #ffffff;
+  --focus: rgba(30, 53, 255, 0.35);
   --blur: 14px;
   --grid-gap: 18px;
 
@@ -34,9 +34,9 @@ html[data-theme="dark"] {
   --border: rgba(245, 246, 248, 0.12);
   --shadow: 0 22px 46px rgba(0, 0, 0, 0.52);
   --shadow-soft: 0 12px 28px rgba(0, 0, 0, 0.42);
-  --accent: #0a84ff;
-  --accent-ink: #b7dbff;
-  --focus: rgba(10, 132, 255, 0.40);
+  --accent: #1E35FF;
+  --accent-ink: #ffffff;
+  --focus: rgba(30, 53, 255, 0.40);
 }
 
 *,
@@ -57,7 +57,7 @@ body {
   font-size: var(--body);
   line-height: var(--lh);
   color: var(--text);
-  background: radial-gradient(1200px 800px at 18% -12%, rgba(10, 132, 255, 0.12), transparent 60%),
+  background: radial-gradient(1200px 800px at 18% -12%, rgba(30, 53, 255, 0.12), transparent 60%),
     radial-gradient(900px 600px at 88% 10%, rgba(255, 45, 85, 0.08), transparent 55%),
     radial-gradient(900px 700px at 45% 110%, rgba(52, 199, 89, 0.08), transparent 55%),
     var(--bg);
@@ -85,7 +85,7 @@ button {
 }
 
 ::selection {
-  background: rgba(10, 132, 255, 0.22);
+  background: rgba(30, 53, 255, 0.22);
 }
 
 .container {
